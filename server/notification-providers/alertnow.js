@@ -22,7 +22,7 @@ class AlertNow extends NotificationProvider {
                 textMsg = `[${monitorJSON?.name ?? ""}] ✅ Application is back online`;
                 status = "close";
                 eventType = "INFO";
-                eventId += `_${monitorJSON?.name.replace(/\s/g, "") ?? ""}`;
+                eventId += `_${monitorJSON?.name?.replace(/\s/g, "") ?? ""}`;
             } else if (heartbeatJSON && heartbeatJSON.status === DOWN) {
                 textMsg = `[${monitorJSON?.name ?? ""}] 🔴 Application went down`;
             }
