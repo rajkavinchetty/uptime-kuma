@@ -20,7 +20,7 @@ export default {
     computed: {
         displayText() {
             if (this.dateOnly) {
-                return this.$root.date(this.value);
+                return this.$root.dateReadable(this.value);
             } else {
                 return this.$root.datetime(this.value);
             }

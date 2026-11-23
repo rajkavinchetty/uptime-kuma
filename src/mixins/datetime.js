@@ -90,6 +90,15 @@ export default {
         },
 
         /**
+         * Return a given value in a readable date format, e.g. "Nov 22, 2026"
+         * @param {any} value Value to format as date
+         * @returns {string} Formatted string
+         */
+        dateReadable(value) {
+            return this.datetimeFormat(value, "MMM D, YYYY");
+        },
+
+        /**
          * Return a given value in the format YYYY-MM-DD
          * @param {any} value  Value to format as date
          * @returns {string} Formatted string
