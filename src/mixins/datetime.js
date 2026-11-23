@@ -99,6 +99,15 @@ export default {
         },
 
         /**
+         * Return a date-only value in a readable format, e.g. Nov 22, 2026
+         * @param {any} value Value to format as date
+         * @returns {string} Formatted string
+         */
+        dateOnlyDisplay(value) {
+            return this.datetimeFormat(value, "MMM D, YYYY");
+        },
+
+        /**
          * Return a given value in the format HH:mm or if second is set
          * to true, HH:mm:ss
          * @param {any} value Value to format
